@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/oder-management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ce6961d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Oder Management</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <a class="logostyle" href="/html/home.html">Catering Management</a>
+      </div>
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="message">
+        <div class="circle">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="dp">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/user-management.html"
+            >User Management</a
+          >
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/storage-management.html"
+            >Storage Management</a
+          >
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/food-management.html"
+            >Food Management</a
+          >
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="#">Chef Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/oder-management.html"
+            >Order Management</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Oder Management -->
+    <div class="oder-management">
+      <h3 class="heading">Oder Management</h3>
+      <div class="management-oder">
+        <div class="search-oder">
+          <input class="search-input" type="text" placeholder="Search" />
+          <i id="search-input-user" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="oder-header">
+          <form>
+            <label for="status"> Choose status: </label>
+            <select name="Status" id="status">
+              <option value="available">Available</option>
+              <option value="unavailable">Unavailable</option>
+              <option value="other">Other</option>
+            </select>
+          </form>
+          <form class="oder-date">
+            <input type="date" value="import-date" />
+            <p class="oder-date-text">to</p>
+            <input type="date" value="expired-date" />
+          </form>
+          <button class="add-new-btn js-add-new-oder">Add New Oder</button>
+        </div>
+      </div>
+      <div class="oder-table">
+        <table>
+          <tr>
+            <th>No</th>
+            <th>Ingredients Name</th>
+            <th>Quanlity</th>
+            <th>Unit</th>
+            <th>Price (USD)</th>
+            <th>Import Date</th>
+            <th>Expired Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Oder management popup -->
+    <div class="oder-popup js-popup-oder open-oder">
+      <div class="popup-container">
+        <div class="popup-close js-popup-close-oder">
+          <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+        </div>
+        <div class="popup-oder-header">
+          <h3 class="heading">Add New Oder</h3>
+        </div>
+        <div class="oder-popup-group">
+          <div class="popup-oder-input">
+            <p class="oder-name-text">Customer Name:</p>
+            <input class="popup-name" placeholder="Enter Customer Name" type="text" />
+          </div>
+          <div class="popup-oder-input">
+            <p class="oder-name-text">Phone Number:</p>
+            <input class="popup-number" placeholder="Enter Customer Name" type="number" />
+          </div>
+          <div class="popup-oder-input">
+            <p class="oder-name-text">Pickup date:</p>
+            <input class="popup-date" placeholder="Enter quanlity" type="date" />
+          </div>
+        </div>
+        <div class="popup-oder-table">
+          <table class="popup-oder-table-container">
+            <tr>
+            <th>No</th>
+            <th>Meal</th>
+            <th>Price</th>
+            <th>Quanlity</th>
+            <th>Total</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td>
+               
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="oder-popup-footer">
+          <button class="close-popup js-popup-close-oder">Close</button>
+          <button class="create-popup js-popup-close-oder">
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/oder-management.js"></script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/food-management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ce6961d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Food Management</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo">
+          <a class="logostyle" href="/html/home.html">Catering Management</a>
+        </div>
+        <div class="searchbar">
+          <input type="text" placeholder="Search" />
+          <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="message">
+          <div class="circle">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="dp">
+            <i class="fa-solid fa-user"></i>
+          </div>
+        </div>
+    </div>
+  
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-detail">
+            <a class="navbar-info" href="/html/user-management.html"
+              >User Management</a
+            >
+          </li>
+          <li class="navbar-detail">
+            <a class="navbar-info" href="/html/storage-management.html"
+              >Storage Management</a
+            >
+          </li>
+          <li class="navbar-detail">
+            <a class="navbar-info" href="/html/food-management.html">Food Management</a>
+          </li>
+          <li class="navbar-detail">
+            <a class="navbar-info" href="#">Chef Management</a>
+          </li>
+          <li class="navbar-detail">
+            <a class="navbar-info" href="/html/oder-management.html">Order Management</a>
+          </li>
+        </ul>
+    </div>
+
+    <!-- Food Management -->
+    <div class="food-management">
+      <h3 class="heading">Food Management</h3>
+        <div class="add-food-btn">
+            <button class="add-food js-add-new-food">Add New Food</button>
+        </div>
+        
+        <div class="food-table-container">
+          <table class="food-table">
+            <tr>
+              <th>No</th>
+              <th>Food Name</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Beef</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ketchup</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <!-- Food Management Popup -->
+    <div class="food-popup js-popup-food open-food">
+      <div class="popup-container">
+        <div class="popup-close js-popup-close-food">
+          <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+        </div>
+        <div class="popup-food-header">
+          <h3 class="heading">Add New Food</h3>
+        </div>
+        <div class="food-popup-group">
+          <div class="popup-food-input">
+            <p class="food-name-text">Food Name:</p>
+            <input class="popup-name" placeholder="Enter Food Name" type="text" />
+          </div>
+          <div class="popup-food-input">
+            <form>
+              <label class="select-food-text" for="ingredients"> Ingredients: </label>
+              <select name="Choose Ingredients" id="popup-input-form">
+                <option value="male">Kg</option>
+                <option value="female">ML</option>
+                <option value="other">Other</option>
+              </select>
+            </form>
+          </div>
+          <div class="popup-food-input">
+            <p class="food-name-text">Quanlity:</p>
+            <input class="popup-quanlity" placeholder="Enter quanlity" type="number" />
+          </div>
+        </div>
+        <div class="popup-food-table">
+          <table class="popup-food-table-container">
+            <tr>
+            <th>No</th>
+            <th>Ingredients Name</th>
+            <th>Quanlity</th>
+            <th>Unit</th>
+            <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Carrot</td>
+              <td>200</td>
+              <td>Gram</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Beef</td>
+              <td>200</td>
+              <td>Gram</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="food-popup-footer">
+          <button class="close-popup js-popup-close-food">Close</button>
+          <button class="create-popup js-popup-close-food">
+            Create
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/js/food-management.js"></script>
+</body>
+</html>

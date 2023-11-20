@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/user-management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ce6961d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>User Management</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <a class="logostyle" href="/html/home.html">Catering Management</a>
+      </div>
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="message">
+        <div class="circle">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="dp">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/user-management.html"
+            >User Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/storage-management.html">Storage Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/food-management.html">Food Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="#">Chef Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/oder-management.html">Order Management</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- User Management table -->
+    <div class="management-user">
+        <h3 class="heading">List of user</h3>
+        
+        <div class="user-manage">
+          <div class="search-user">
+            <input class="search-input" type="text" placeholder="Search" />
+            <i id="search-input-user" class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="choose">
+            <div class="gender-choice">
+              <form>
+                <label class="gender-form" for="gender"> Choose gender: </label>
+                <select name="gender" id="gender">
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </form>
+            </div>
+            <div class="role-choice">
+              <form>
+                <label class="gender-form" for="role"> Choose role: </label>
+                <select name="role" id="role">
+                  <option value="admin">Admin</option>
+                  <option value="chef">Chef</option>
+                  <option value="user">Reception</option>
+                  <option value="order">Storage</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <button class="add-user js-add-user">Add New User</button>
+        </div>
+        <div class="usermanagement-table">
+          <table>
+            <tr>
+              <th>No</th>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Date of Birth</th>
+              <th>Role</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>AD01</td>
+              <td>Maria</td>
+              <td>Anders</td>
+              <td>Male</td>
+              <td>08/09/1989</td>
+              <td>Admin</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash js-delete-user"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>OR01</td>
+              <td>Maria</td>
+              <td>Anders</td>
+              <td>Male</td>
+              <td>08/09/1989</td>
+              <td>Order</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>UR01</td>
+              <td>Maria</td>
+              <td>Anders</td>
+              <td>Male</td>
+              <td>08/09/1989</td>
+              <td>User</td>
+              <td>
+                <i id="icon" class="fa-solid fa-square-pen"></i>
+                <i id="icon" class="fa-solid fa-eye"></i>
+                <i id="icon" class="fa-solid fa-trash"></i>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Add new user popup -->
+      <div class="user-popup js-popup open">
+        <div class="popup-container">
+          <div class="popup-close js-popup-close">
+            <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+          </div>
+  
+          <header class="popup-header">
+            <h2 class="popup-userinfo">Create New User</h2>
+          </header>
+  
+          <div class="popup-body">
+            <div class="popup-body-left">
+              <div class="popup-input">
+                <p>ID:</p>
+                <input class="popup-id" placeholder="ID" type="text" />
+              </div>
+              <div class="popup-input">
+                <p>First Name:</p>
+                <input
+                  class="popup-firstn"
+                  placeholder="First Name"
+                  type="text"
+                />
+              </div>
+              <div class="popup-input">
+                <p>Last Name:</p>
+                <input class="popup-lastn" placeholder="Last Name" type="text" />
+              </div>
+              <div class="popup-input">
+                <p>DOB:</p>
+                <input
+                  class="popup-DOB"
+                  placeholder="Date Of Birth"
+                  type="date"
+                />
+              </div>
+            </div>
+            <div class="popup-body-right">
+              <div class="popup-input">
+                <form>
+                  <label for="gender"> Choose gender: </label>
+                  <select name="gender" id="popup-input-form">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </select>
+                </form>
+              </div>
+              <div class="popup-input">
+                <form>
+                  <label for="role"> Choose role: </label>
+                  <select name="role" id="popup-input-form-role">
+                    <option value="admin">Admin</option>
+                    <option value="chef">Chef</option>
+                    <option value="user">Reception</option>
+                  <option value="order">Storage</option>
+                  </select>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="popup-footer">
+            <button class="close-popup js-popup-close">Close</button>
+            <button class="create-popup js-popup-close">Create</button>
+          </div>
+        </div>
+        <script src="/js/user-management.js"></script>
+      </div>
+    </div>
+
+    <!-- Delete User Popup -->
+    <div class="delete-popup delete-js-popup delete">
+      <div class="popup-delete-container">
+        <div class="popup-close js-popup-delete-close">
+          <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+        </div>
+        <header class="popup-header">
+          <h2 class="popup-userinfo">Are you sure want to delete this user?</h2>
+        </header>
+        <div class="popup-text">
+          <p class="popup-userinfo-text">"Maria Anders"</p>
+        </div>
+        <div class="popup-delete-footer">
+          <button class="close-popup js-popup-delete-close">Cancel</button>
+          <button class="create-popup js-popup-delete-close">Delete</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.header {
+    height: 70px;
+    width: 100%;
+    padding: 30px 10px;
+    background-color: #fafaff;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logostyle {
+    font-size: 25px;
+    font-weight: 600;
+    color: #145fc8af;
+    text-decoration: none;
+}
+
+.searchbar input {
+    width: 250px;
+    height: 50px;
+    border-radius: 50px 0 0 50px;
+    background-color: #ededed;
+    padding: 0 20px;
+    font-size: 15px;
+    outline: none;
+    border: none;
+}
+
+#searchicon {
+    padding: 8px 0 0 10px;
+    font-size: 20px;
+    color: #145fc8af;
+}
+
+#searchicon:hover {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.message {
+    display: flex;
+    width: 50px;
+    justify-content: space-between;
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    top: 70px;
+    position: relative;
+    background-color: #fafaff;
+    box-shadow: 1px 1px 15px rgba(161, 182, 253, 0.825);
+}
+
+.navbar-list {
+    display: flex;
+    margin-left: 20px;
+    
+}
+
+.navbar-detail {
+    height: 50px;
+    padding: 15px 0px;
+    list-style-type: none;
+    min-width: 150px;
+    margin-right: 20px;
+    display: inline;
+    text-align: center;
+}
+
+.navbar-info {
+    text-decoration: none;
+    color: #145fc8af;
+    font-weight: 500;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.oder-management{
+    margin-top: 90px;
+}
+
+.heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(134, 141, 153, 0.5);
+}
+
+.management-oder{
+    display: flex;
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 80px;
+}
+
+.oder-header{
+    display: flex;
+}
+
+.search-oder{
+    padding: 0px 50px;
+}
+
+.search-input {
+    width: 250px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: #ededed;
+    padding: 0 10px;
+    font-size: 15px;
+}
+
+#search-input-user {
+    font-size: 20px;
+    padding: 5px 10px;
+}
+
+#status{
+    height: 30px;
+    width: 90px;
+    border-radius: 15px;
+    margin-right: 20px;
+}
+
+.oder-date{
+    display: flex;
+}
+
+.oder-date-text{
+    padding: 5px 10px;
+}
+
+.add-new-btn{
+    margin: 0 20px;
+    width: 150px;
+    height: 30px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.oder-table{
+    margin-top: 50px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 130px;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+#icon {
+    color: #1c1c1c;
+    font-size: 20px;
+    padding: 0px 10px;
+}
+
+#icon:hover{
+    cursor: pointer;
+}
+
+/* CSS Popup Add New User */
+
+.oder-popup{
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.oder-popup.open-oder{
+    display: flex;
+}
+
+.popup-container{
+    background-color: #fff;
+    width: 900px;
+    min-height: 500px;
+}
+
+.popup-close{
+    float: right;
+    font-size: 25px;
+    margin: 5px; 
+}
+
+.popup-close:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.popup-oder-header{
+    margin: 15px 0;
+}
+
+.popup-oder-input{
+    display: flex;
+    margin: 20px 0px;
+}
+
+.oder-name-text{
+    margin: 10px 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.popup-name{
+    padding: 0px 10px;
+    width: 185px;
+    margin-left: 15px;
+}
+
+.select-oder-text{
+    margin: 10px 25px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#popup-input-form{
+    width: 185px;
+    height: 33.6px;
+    padding: 0px 10px;
+}
+
+.popup-number{
+    width: 185px;
+    padding: 0px 10px;
+    margin-left: 25px;
+}
+
+.popup-date{
+    width: 185px;
+    padding: 0px 10px;
+    margin-left: 48px;
+}
+
+.popup-oder-table{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+   
+}
+
+.popup-oder-table-container{
+    width: 600px;
+    border-collapse: collapse;
+    margin-left: 0;
+}
+
+.oder-popup-footer{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.close-popup{
+    width: 60px;
+    height: 30px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.close-popup:hover{
+    background-color: red;
+    color: #fff;
+}
+
+.create-popup{
+    width: 60px;
+    height: 30px;
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+.create-popup:hover{
+    background-color: rgb(16, 202, 16);
+    color: #fff;
+}
+
+/* CSS Popup Delete User */
+

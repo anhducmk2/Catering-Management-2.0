@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ce6961d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Catering Management</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <p class="logostyle">Catering Management</p>
+      </div>
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="message">
+        <div class="circle">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="dp">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/user-management.html">User Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/storage-management.html">Storage Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/food-management.html">Food Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="#">Chef Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/oder-management.html">Order Management</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart">
+      <h3 class="heading">Dashboard</h3>
+      <div class="charts">
+        <div class="charts-card">
+          <p class="chart-title">Top 5 Products</p>
+          <div id="bar-chart"></div>
+        </div>
+
+        <div class="charts-card">
+          <p class="chart-title">Purchase and Sales Orders</p>
+          <div id="area-chart"></div>
+        </div>
+      </div>
+      <!-- ApexCharts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+      <!-- Custom JS -->
+      <script src="/js/chart.js"></script>
+    </div>
+  </body>
+</html>

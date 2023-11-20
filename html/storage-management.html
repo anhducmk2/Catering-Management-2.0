@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/storage-management.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8ce6961d68.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Storage Management</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <a class="logostyle" href="/html/home.html">Catering Management</a>
+      </div>
+      <div class="searchbar">
+        <input type="text" placeholder="Search" />
+        <i id="searchicon" class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="message">
+        <div class="circle">
+          <i class="fa-solid fa-bell"></i>
+        </div>
+        <div class="dp">
+          <i class="fa-solid fa-user"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul class="navbar-list">
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/user-management.html"
+            >User Management</a
+          >
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/storage-management.html"
+            >Storage Management</a
+          >
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/food-management.html">Food Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="#">Chef Management</a>
+        </li>
+        <li class="navbar-detail">
+          <a class="navbar-info" href="/html/oder-management.html">Order Management</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Storage Management -->
+    <div class="management-storage">
+      <h3 class="heading">Storage Management</h3>
+      <div class="storage-manage">
+        <div class="search-storage">
+          <input class="search-input" type="text" placeholder="Search" />
+          <i id="search-input-user" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="storage-header">
+          <form>
+            <label for="status"> Choose status: </label>
+            <select name="Status" id="status">
+              <option value="available">Available</option>
+              <option value="unavailable">Unavailable</option>
+              <option value="other">Other</option>
+            </select>
+          </form>
+          <form class="storage-date">
+            <input type="date" value="import-date" />
+            <p class="storage-date-text">to</p>
+            <input type="date" value="expired-date" />
+          </form>
+          <button class="add-btn">Add Quanlity</button>
+          <button class="add-new-btn js-add-new-ingredients">
+            Add New Ingredients
+          </button>
+        </div>
+      </div>
+      <div class="storage-table">
+        <table>
+          <tr>
+            <th>No</th>
+            <th>Ingredients Name</th>
+            <th>Quanlity</th>
+            <th>Unit</th>
+            <th>Price (USD)</th>
+            <th>Import Date</th>
+            <th>Expired Date</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Carrot</td>
+            <td>200</td>
+            <td>Gram</td>
+            <td>2</td>
+            <td>10/09/2023</td>
+            <td>13/03/2023</td>
+            <td>Available</td>
+            <td>
+              <i id="icon" class="fa-solid fa-square-pen"></i>
+              <i id="icon" class="fa-solid fa-eye"></i>
+              <i id="icon" class="fa-solid fa-trash"></i>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Storage popup -->
+      <div class="storage-popup js-popup-storage open-storage">
+        <div class="popup-container">
+          <div class="popup-close js-popup-close-storage">
+            <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+          </div>
+
+          <header class="popup-header">
+            <h2 class="popup-userinfo">Add New Ingredients</h2>
+          </header>
+
+          <div class="popup-storage-body">
+            <form class="ingredients-text-input">
+              <label class="ingredients-text">Ingredients Name: </label>
+              <input
+                type="text"
+                class="ingredient-input"
+                placeholder="Enter ingredients name"
+              />
+            </form>
+            <form class="ingredients-text-input">
+              <label class="unit">Unit: </label>
+              <select name="unit" id="unit">
+                <option value="gram">gram</option>
+                <option value="ml">ml</option>
+                <option value="other">other</option>
+              </select>
+            </form>
+            <div class="popup-storage-table">
+              <table>
+                <tr>
+                  <th>No</th>
+                  <th>Ingredients Name</th>
+                  <th>Unit</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Beef</td>
+                  <td>Gram</td>
+                  <td>
+                    <i id="icon" class="fa-solid fa-square-pen"></i>
+                    <i id="icon" class="fa-solid fa-eye"></i>
+                    <i id="icon" class="fa-solid fa-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ketchup</td>
+                  <td>ml</td>
+                  <td>
+                    <i id="icon" class="fa-solid fa-square-pen"></i>
+                    <i id="icon" class="fa-solid fa-eye"></i>
+                    <i id="icon" class="fa-solid fa-trash"></i>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Chicken</td>
+                  <td>Gram</td>
+                  <td>
+                    <i id="icon" class="fa-solid fa-square-pen"></i>
+                    <i id="icon" class="fa-solid fa-eye"></i>
+                    <i id="icon" class="fa-solid fa-trash"></i>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="storage-footer">
+              <button class="close-popup js-popup-close-storage">Close</button>
+              <button class="create-popup js-popup-close-storage">
+                Create
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="/js/storage-management.js"></script>
+
+      <!-- Quanlity Popup -->
+      <!-- <div class="quanlity-popup js-popup-quanlity">
+        <div class="popup-quanlity-container">
+          <div class="popup-close js-popup-close-quanlity">
+            <i id="close-icon" class="fa-solid fa-rectangle-xmark"></i>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </body>
+</html>
